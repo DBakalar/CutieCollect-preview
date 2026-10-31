@@ -24,20 +24,21 @@ for version in range(57, 61):
         raise SystemExit(f'v{version}: manifest HTML hash mismatch')
     print(f'v{version}: {len(paths)} image paths OK; HTML hash OK')
 
-page = root / 'v61/index.html'
-raw = page.read_bytes()
-html = raw.decode('utf-8')
-paths = set(re.findall(r'\.\./assets/(?:runtime|legacy)/[A-Za-z0-9_@.:-]+\.(?:png|webp)', html))
-manifest = json.loads((page.parent / 'asset-manifest.json').read_text(encoding='utf-8'))
-expected = manifest['runtimeAssets'] + manifest['shellAssets']
-if len(paths) != expected:
-    raise SystemExit(f'v61: found {len(paths)} shared images, expected {expected}')
-for relative in paths:
-    if not (page.parent / relative).is_file():
-        raise SystemExit(f'v61: missing {relative}')
-if manifest['htmlSha256'] != hashlib.sha256(raw).hexdigest():
-    raise SystemExit('v61: manifest HTML hash mismatch')
-archive = page.parent / manifest['offlineZip']
-if not archive.is_file() or manifest['offlineZipSha256'] != hashlib.sha256(archive.read_bytes()).hexdigest():
-    raise SystemExit('v61: offline ZIP missing or changed')
-print(f'v61: {len(paths)} shared image paths OK; HTML and offline ZIP hashes OK')
+for version in (61, 62):
+    page = root / f'v{version}/index.html'
+    raw = page.read_bytes()
+    html = raw.decode('utf-8')
+    paths = set(re.findall(r'\.\./assets/(?:runtime|legacy)/[A-Za-z0-9_@.:-]+\.(?:png|webp)', html))
+    manifest = json.loads((page.parent / 'asset-manifest.json').read_text(encoding='utf-8'))
+    expected = manifest['runtimeAssets'] + manifest['shellAssets']
+    if len(paths) != expected:
+        raise SystemExit(f'v{version}: found {len(paths)} shared images, expected {expected}')
+    for relative in paths:
+        if not (page.parent / relative).is_file():
+            raise SystemExit(f'v{version}: missing {relative}')
+    if manifest['htmlSha256'] != hashlib.sha256(raw).hexdigest():
+        raise SystemExit(f'v{version}: manifest HTML hash mismatch')
+    archive = page.parent / manifest['offlineZip']
+    if not archive.is_file() or manifest['offlineZipSha256'] != hashlib.sha256(archive.read_bytes()).hexdigest():
+        raise SystemExit(f'v{version}: offline ZIP missing or changed')
+    print(f'v{version}: {len(paths)} shared image paths OK; HTML and offline ZIP hashes OK')
