@@ -353,7 +353,7 @@ body{background-image:radial-gradient(circle at 3% 30%,#fff9 0 22px,transparent 
  <button data-panel="parent" type="button">👥 <span>Parent</span></button>
  </nav><details id="moreMenu" class="quick-tools"><summary>✦ More</summary><div class="quick-links">
  <button data-panel="nursery">🥚 Nursery</button>
- 
+
  <button data-panel="inventory">🎁 Treats</button>
  <button data-panel="profiles" id="profileButton">👤 Player</button>
  </div></details><div class="stat">✨ <span id="dust">0</span></div></header><div class="main"><main class="panel"><div class="hero" aria-label="Your chosen companion"><div class="hero-stars" aria-hidden="true">✦ ✨ ⭐ ✦ ✨</div><div class="hero-art" id="heroArt"></div><div class="hero-name" id="heroName">Your companion</div><div class="hero-pick">Pick a different companion from your collection →</div></div><div class="lesson-board"><div class="lessonhead"><div><div class="eyebrow" id="unit">UNIT 1</div><h2 id="lessonTitle" style="margin:4px 0">Meet F and J</h2></div><select id="lessonSelect" aria-label="Choose a lesson"></select></div><div class="row" style="justify-content:space-between;margin-top:12px"><span class="mini" id="taskCount"></span><label class="mini">Guidance <select id="hintMode"><option value="full">Full guide</option><option value="assist">Hints when needed</option><option value="independent">Independent</option></select></label><button id="hintBtn">Show hint</button></div><div class="prompt" id="prompt"></div><input id="typing" class="typing" aria-label="Type the displayed text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"><div class="message" id="message">Type the highlighted character.</div><div class="keyboard" id="keyboard"></div><div class="fingers" id="fingers"></div><div class="guide" id="guide"></div><div class="row" style="justify-content:space-between"><span class="mini" id="accuracy"></span><button id="nextLesson" class="hidden">Next lesson →</button></div><div class="dash-meters" aria-label="Typing progress">
@@ -1696,11 +1696,11 @@ function showStudio(view='shelf',id=null) {
   const fonts=Object.entries(BOOK_FONTS).map(([key,item])=>'<option value="'+key+'" '+(draft.fontId===key?'selected':'')+'>'+item.name+(state.notebookShop.fonts.includes(key)?'':' · '+item.price+' Stardust')+'</option>').join('');
   const inks=Object.entries(BOOK_INKS).map(([key,item])=>'<option value="'+key+'" '+(draft.inkId===key?'selected':'')+'>'+item.name+(state.notebookShop.inks.includes(key)?'':' · '+item.price+' Stardust')+'</option>').join('');
   openPanel('book-editor','My Story',button('studio','← Notebooks')+'<div style="text-align:center">'+
-    art(notebookArt(state.notebookUI.activeCover),'Notebook','width:150px;height:175px;object-fit:contain')+'</div>'+ 
+    art(notebookArt(state.notebookUI.activeCover),'Notebook','width:150px;height:175px;object-fit:contain')+'</div>'+
     '<label>Title <input id="storyTitle" value="'+escapeHtml(draft.title)+'"></label><p><label>Font <select id="storyFont">'+fonts+'</select></label> '+
-    '<label>Ink <select id="storyInk">'+inks+'</select></label></p>'+ 
-    '<textarea id="storyText" aria-label="Write your story" spellcheck="true" autocorrect="on" style="width:100%;min-height:240px;resize:vertical;font-family:'+BOOK_FONTS[draft.fontId].family+';color:'+BOOK_INKS[draft.inkId].color+'">'+escapeHtml(draft.text)+'</textarea>'+ 
-    '<div id="wordChoices" role="group" aria-label="Optional word suggestions" hidden style="background:#fff8fd;border:2px solid #d9b8df;border-radius:12px;padding:9px;margin:7px 0"></div>'+ 
+    '<label>Ink <select id="storyInk">'+inks+'</select></label></p>'+
+    '<textarea id="storyText" aria-label="Write your story" spellcheck="true" autocorrect="on" style="width:100%;min-height:240px;resize:vertical;font-family:'+BOOK_FONTS[draft.fontId].family+';color:'+BOOK_INKS[draft.inkId].color+'">'+escapeHtml(draft.text)+'</textarea>'+
+    '<div id="wordChoices" role="group" aria-label="Optional word suggestions" hidden style="background:#fff8fd;border:2px solid #d9b8df;border-radius:12px;padding:9px;margin:7px 0"></div>'+
     '<div class="row">'+button('undo-story','Undo')+button('save-story','Save story')+'</div><div id="storyStatus" aria-live="polite"></div>');
 }
 function updateSuggestions(field) {
@@ -1718,9 +1718,9 @@ function updateSuggestions(field) {
 function showProfiles() {
   const index=store.profileIndex();
   const options=index.profiles.map(profile=>'<option value="'+escapeHtml(profile.id)+'" '+(profile.id===index.active?'selected':'')+'>'+escapeHtml(profile.name)+'</option>').join('');
-  openPanel('profiles','Players','<p><label>Player <select id="profileSelect">'+options+'</select></label> '+button('switch-profile','Switch')+'</p>'+ 
-    '<p><label>New player <input id="profileName" maxlength="30"></label> '+button('create-profile','Add player')+'</p>'+ 
-    '<p>'+button('export-save','Download backup')+' <label>Import backup <input type="file" id="importSave" accept="application/json,.json"></label></p>'+ 
+  openPanel('profiles','Players','<p><label>Player <select id="profileSelect">'+options+'</select></label> '+button('switch-profile','Switch')+'</p>'+
+    '<p><label>New player <input id="profileName" maxlength="30"></label> '+button('create-profile','Add player')+'</p>'+
+    '<p>'+button('export-save','Download backup')+' <label>Import backup <input type="file" id="importSave" accept="application/json,.json"></label></p>'+
     '<details><summary>Profile controls</summary><p>'+button('reset-profile','Reset progress')+' '+button('delete-profile','Delete profile')+'</p></details><p id="profileStatus" aria-live="polite"></p>');
 }
 function showStats() {
@@ -1728,14 +1728,14 @@ function showStats() {
   const mastery=engine.masteryStatus();
   const odds=EGG_THEME_WEIGHTS.map(([theme,weight])=>
     escapeHtml(theme==='Galaxy'?'Super-rare (Galaxy)':theme)+': '+weight+'%').join(' · ');
-  openPanel('stats','Progress','<p>'+done+' lessons completed · '+state.stardust+' Stardust earned</p>'+ 
-    '<p>Last full lesson: '+(Number.isSafeInteger(state.lastFullLesson)?escapeHtml(curriculum.lesson(state.lastFullLesson).title):'None yet')+'</p>'+ 
+  openPanel('stats','Progress','<p>'+done+' lessons completed · '+state.stardust+' Stardust earned</p>'+
+    '<p>Last full lesson: '+(Number.isSafeInteger(state.lastFullLesson)?escapeHtml(curriculum.lesson(state.lastFullLesson).title):'None yet')+'</p>'+
     '<p>Eggs ready: '+state.eggs.length+'</p><p>First-try accuracy, last 20 keys: '+
     (mastery.n?Math.round(mastery.rate*100)+'% ('+mastery.n+' keys)':'No keys yet')+'</p>'+
     '<p>Egg themes: '+odds+'</p>');
 }
 function showSettings() {
-  openPanel('settings','Settings','<p>Guidance: '+escapeHtml(state.hintMode || 'full')+'</p>'+ 
+  openPanel('settings','Settings','<p>Guidance: '+escapeHtml(state.hintMode || 'full')+'</p>'+
     '<p>Use the Guidance menu beside the lesson to choose how much help to show.</p>'+button('profiles','Player and backups'));
 }
 function changeProfile(next) {
@@ -1855,8 +1855,8 @@ function movementCard(id) {
   const shade=document.createElement('div');shade.id='movementCard';
   shade.style.cssText='position:fixed;inset:0;z-index:11000;display:grid;place-items:center;padding:12px;background:#fff9f2ef';
   shade.innerHTML='<section role="dialog" aria-modal="true" aria-label="New key move" tabindex="-1" style="width:min(940px,100%);max-height:calc(100vh - 24px);overflow:auto;background:#fffdf9;border:3px solid #dc8bac;border-radius:24px;padding:20px;box-shadow:0 18px 55px #65455b35">'+
-    '<p>New key move</p><h2>'+escapeHtml(definition.title)+'</h2><p>'+escapeHtml(definition.show)+'</p><div class="keyboard" style="display:block">'+board+'</div>'+ 
-    '<p>Try it: <strong>'+definition.keyLabels.map(escapeHtml).join(' → ')+'</strong></p><p id="movementStatus" role="status"></p>'+ 
+    '<p>New key move</p><h2>'+escapeHtml(definition.title)+'</h2><p>'+escapeHtml(definition.show)+'</p><div class="keyboard" style="display:block">'+board+'</div>'+
+    '<p>Try it: <strong>'+definition.keyLabels.map(escapeHtml).join(' → ')+'</strong></p><p id="movementStatus" role="status"></p>'+
     button('finish-movement','Continue')+'</section>';
   document.body.append(shade);shade.querySelector('section').focus();
   updateMovement();
