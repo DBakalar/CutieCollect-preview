@@ -1,0 +1,43 @@
+{
+  "issue": "APP-068/069/070/067/071",
+  "version": "v60-candidate",
+  "source": "cutie_collect_playable_v59.html",
+  "sourceSha256": "fc2c515a1d6872781a619054ed812ac7c2b2727c14d63b403c3d184e38cd3836",
+  "htmlSha256": "5b3f79dddfd0db8750fd29d1b9495bcee40c9b51702a98e18e77cd59677fc260",
+  "assetDirectories": [
+    {
+      "path": "../assets/v54/",
+      "count": 251
+    },
+    {
+      "path": "../assets/v58/",
+      "count": 14
+    }
+  ],
+  "newAssets": 0,
+  "saveSchemaChange": "none",
+  "eggThemeWeights": {
+    "Original": 50,
+    "Nature": 13,
+    "Water": 12,
+    "Blossom": 12,
+    "Lava": 5,
+    "Crystal": 5,
+    "Galaxy": 3
+  },
+  "modules": [
+    {
+      "id": "app-069-lesson-reward-v59",
+      "file": "app/lesson_reward_v59.js"
+    },
+    {
+      "id": "app-070-shop-progress-v59",
+      "file": "app/shop_progress_v59.js"
+    },
+    {
+      "id": "app-067-regular-cupcake-hearts-v59",
+      "file": "app/regular_cupcake_hearts_v59.js"
+    }
+  ],
+  "purchaseGate": "collect creature before buying notebook cover"
+}

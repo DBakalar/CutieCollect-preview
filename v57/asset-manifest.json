@@ -1,0 +1,10 @@
+{
+  "issue": "APP-065",
+  "version": "v57-candidate",
+  "source": "cutie_collect_playable_v56.html",
+  "sourceSha256": "2a2b2d0364eae0171c045a70d3cdb26c68f8c5f5ea60c6e7cfe5456e4ec381a6",
+  "htmlSha256": "7593ab1a94dfd4c69793fda8c7653ba46aae7413add453fc1725c29764fb1779",
+  "inheritedAssetDirectory": "../assets/v54/",
+  "inheritedAssetCount": 251,
+  "saveChange": "none; derives bookmark from existing per-profile completed counts"
+}

@@ -1,0 +1,15 @@
+{
+  "issue": "APP-064",
+  "version": "v56-candidate",
+  "source": "cutie_collect_playable_v55.html",
+  "sourceSha256": "24cd0887489d10e7003c56e45e704059ac64f56d8c0daf60deac497fd67bb4d1",
+  "htmlSha256": "188387f6c4cf9cdec28287a66a56685873890e18b122058fee71ebc854c57461",
+  "inheritedAssetDirectory": "../assets/v54/",
+  "inheritedAssetCount": 251,
+  "coverPrices": {
+    "Common": 100,
+    "Uncommon": 150,
+    "Rare": 225,
+    "Galactic": 350
+  }
+}

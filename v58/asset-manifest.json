@@ -1,0 +1,155 @@
+{
+  "issue": "APP-066",
+  "version": "v58-candidate",
+  "source": "cutie_collect_playable_v57.html",
+  "sourceSha256": "0f77731338f08a1c76c0abfa901594db55e6853f8246cd40acf93a992e779cdc",
+  "htmlSha256": "6b7f8c622fb380087b12aa72ea1d7285234d185b823f4344eab4419c930530f4",
+  "inheritedAssetDirectory": "../assets/v54/",
+  "inheritedAssetCount": 251,
+  "newAssetDirectory": "../assets/v58/",
+  "newAssetCount": 14,
+  "activeCoverCount": 35,
+  "saveChange": "none",
+  "entries": [
+    {
+      "id": "10:Original",
+      "issue": "ART-030",
+      "theme": "Original",
+      "name": "Cappu",
+      "source": "art_generated/design_previews/ART-030_capybara_storybook_covers_v1/cover_10_original_cappu_v1.png",
+      "sha256": "eca652b15e1ea602564f2b69aeeadfcf6359556bcf009f8be3804b3422ed47fc",
+      "asset": "eca652b15e1ea602564f2b69aeeadfcf6359556bcf009f8be3804b3422ed47fc.png",
+      "bytes": 2722198
+    },
+    {
+      "id": "10:Water",
+      "issue": "ART-030",
+      "theme": "Water",
+      "name": "Boba",
+      "source": "art_generated/design_previews/ART-030_capybara_storybook_covers_v1/cover_10_water_boba_v1.png",
+      "sha256": "a08ef9e771e986c5cf01c97e6af9b9eab6d6aedd028a915f12f3af25ced06d4d",
+      "asset": "a08ef9e771e986c5cf01c97e6af9b9eab6d6aedd028a915f12f3af25ced06d4d.png",
+      "bytes": 3064685
+    },
+    {
+      "id": "10:Nature",
+      "issue": "ART-030",
+      "theme": "Nature",
+      "name": "Pompom",
+      "source": "art_generated/design_previews/ART-030_capybara_storybook_covers_v1/cover_10_nature_pompom_v1.png",
+      "sha256": "9285ae8d729c2ac65c89954307ac4acf8d5452f875fabf1886ea3c340730e0be",
+      "asset": "9285ae8d729c2ac65c89954307ac4acf8d5452f875fabf1886ea3c340730e0be.png",
+      "bytes": 3298730
+    },
+    {
+      "id": "10:Blossom",
+      "issue": "ART-030",
+      "theme": "Blossom",
+      "name": "Posie",
+      "source": "art_generated/design_previews/ART-030_capybara_storybook_covers_v1/cover_10_blossom_posie_v1.png",
+      "sha256": "13fb5fb706259d848dc689a8df6c231b1b7d5741e202bdd36ce4f7344b01a325",
+      "asset": "13fb5fb706259d848dc689a8df6c231b1b7d5741e202bdd36ce4f7344b01a325.png",
+      "bytes": 3165978
+    },
+    {
+      "id": "10:Lava",
+      "issue": "ART-030",
+      "theme": "Lava",
+      "name": "Toasty",
+      "source": "art_generated/design_previews/ART-030_capybara_storybook_covers_v1/cover_10_lava_toasty_v1.png",
+      "sha256": "d4bbea6729c6ca570b47a9501ed502f56b393c47f5321d2b6a29afd08f138b00",
+      "asset": "d4bbea6729c6ca570b47a9501ed502f56b393c47f5321d2b6a29afd08f138b00.png",
+      "bytes": 2767296
+    },
+    {
+      "id": "10:Crystal",
+      "issue": "ART-030",
+      "theme": "Crystal",
+      "name": "Gembean",
+      "source": "art_generated/design_previews/ART-030_capybara_storybook_covers_v1/cover_10_crystal_gembean_v1.png",
+      "sha256": "a96a3c809018ab98fe2b703938cc178c9ecbb15ecd604fb3a442112d3ff360bf",
+      "asset": "a96a3c809018ab98fe2b703938cc178c9ecbb15ecd604fb3a442112d3ff360bf.png",
+      "bytes": 2879525
+    },
+    {
+      "id": "10:Galaxy",
+      "issue": "ART-030",
+      "theme": "Galaxy",
+      "name": "Cosmo Cap",
+      "source": "art_generated/design_previews/ART-030_capybara_storybook_covers_v1/cover_10_galaxy_cosmo-cap_v1.png",
+      "sha256": "a034b70cc0e3887ba592546f9331e3f767b01d1c23841046ebbef5963b46dbb6",
+      "asset": "a034b70cc0e3887ba592546f9331e3f767b01d1c23841046ebbef5963b46dbb6.png",
+      "bytes": 2787115
+    },
+    {
+      "id": "9:Original",
+      "issue": "ART-031",
+      "theme": "Original",
+      "name": "Nibbles",
+      "source": "art_generated/design_previews/ART-031_snail_storybook_covers_v1/cover_09_original_nibbles_v1.png",
+      "sha256": "d65ee62c6fd9e06f166c60f47e6d0438d6dd846844c0f6cc695ec66f62ff3118",
+      "asset": "d65ee62c6fd9e06f166c60f47e6d0438d6dd846844c0f6cc695ec66f62ff3118.png",
+      "bytes": 2653560
+    },
+    {
+      "id": "9:Water",
+      "issue": "ART-031",
+      "theme": "Water",
+      "name": "Puddlewick",
+      "source": "art_generated/design_previews/ART-031_snail_storybook_covers_v1/cover_09_water_puddlewick_v1.png",
+      "sha256": "b655d5a15f6f091f6868dfc9cac7a1362e59fc8b9d72e45e828b345ec7479b4b",
+      "asset": "b655d5a15f6f091f6868dfc9cac7a1362e59fc8b9d72e45e828b345ec7479b4b.png",
+      "bytes": 2989769
+    },
+    {
+      "id": "9:Nature",
+      "issue": "ART-031",
+      "theme": "Nature",
+      "name": "Slow-Mo",
+      "source": "art_generated/design_previews/ART-031_snail_storybook_covers_v1/cover_09_nature_slow-mo_v1.png",
+      "sha256": "f147d896bf1ea79c55438c6e557b685c922685ef5f3e085b512bd672b83950e0",
+      "asset": "f147d896bf1ea79c55438c6e557b685c922685ef5f3e085b512bd672b83950e0.png",
+      "bytes": 2769425
+    },
+    {
+      "id": "9:Blossom",
+      "issue": "ART-031",
+      "theme": "Blossom",
+      "name": "Buttercup",
+      "source": "art_generated/design_previews/ART-031_snail_storybook_covers_v1/cover_09_blossom_buttercup_v1.png",
+      "sha256": "e262e1643625304e398243916a7a79e23c45c30658cf9e61d47b9ede5f3e7575",
+      "asset": "e262e1643625304e398243916a7a79e23c45c30658cf9e61d47b9ede5f3e7575.png",
+      "bytes": 3050586
+    },
+    {
+      "id": "9:Lava",
+      "issue": "ART-031",
+      "theme": "Lava",
+      "name": "Charcoal",
+      "source": "art_generated/design_previews/ART-031_snail_storybook_covers_v1/cover_09_lava_charcoal_v1.png",
+      "sha256": "5674f837dc7a9c359edcc74c1ccdf488a0b6f7096c2c6cca3d2d172afe4107ed",
+      "asset": "5674f837dc7a9c359edcc74c1ccdf488a0b6f7096c2c6cca3d2d172afe4107ed.png",
+      "bytes": 2546857
+    },
+    {
+      "id": "9:Crystal",
+      "issue": "ART-031",
+      "theme": "Crystal",
+      "name": "Citrine",
+      "source": "art_generated/design_previews/ART-031_snail_storybook_covers_v1/cover_09_crystal_citrine_v1.png",
+      "sha256": "8ec22316183fba8effc509107842df2c923e8938af7565b3240dc68ae27e3804",
+      "asset": "8ec22316183fba8effc509107842df2c923e8938af7565b3240dc68ae27e3804.png",
+      "bytes": 2688896
+    },
+    {
+      "id": "9:Galaxy",
+      "issue": "ART-031",
+      "theme": "Galaxy",
+      "name": "Moontrail",
+      "source": "art_generated/design_previews/ART-031_snail_storybook_covers_v1/cover_09_galaxy_moontrail_v1.png",
+      "sha256": "c9560ff35d45b60925970e262599a0d18109563d4165ce61b13ea13ae761ccc1",
+      "asset": "c9560ff35d45b60925970e262599a0d18109563d4165ce61b13ea13ae761ccc1.png",
+      "bytes": 2673017
+    }
+  ]
+}

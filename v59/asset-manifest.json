@@ -1,0 +1,42 @@
+{
+  "issue": "APP-068/069/070/067",
+  "version": "v59-candidate",
+  "source": "cutie_collect_playable_v58.html",
+  "sourceSha256": "8144dd4a15e6b7b0df2c3a62f8d9d5463e6418793746d60c393eaebe65d7de4b",
+  "htmlSha256": "8a61af555a4c77ea58dd1ee544d4ad453ca98c02848c29ca3c8113fc87c47300",
+  "assetDirectories": [
+    {
+      "path": "../assets/v54/",
+      "count": 251
+    },
+    {
+      "path": "../assets/v58/",
+      "count": 14
+    }
+  ],
+  "newAssets": 0,
+  "saveSchemaChange": "none",
+  "eggThemeWeights": {
+    "Original": 50,
+    "Nature": 13,
+    "Water": 12,
+    "Blossom": 12,
+    "Lava": 5,
+    "Crystal": 5,
+    "Galaxy": 3
+  },
+  "modules": [
+    {
+      "id": "app-069-lesson-reward-v59",
+      "file": "app/lesson_reward_v59.js"
+    },
+    {
+      "id": "app-070-shop-progress-v59",
+      "file": "app/shop_progress_v59.js"
+    },
+    {
+      "id": "app-067-regular-cupcake-hearts-v59",
+      "file": "app/regular_cupcake_hearts_v59.js"
+    }
+  ]
+}
