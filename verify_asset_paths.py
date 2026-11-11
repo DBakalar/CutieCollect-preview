@@ -24,7 +24,7 @@ for version in range(57, 61):
         raise SystemExit(f'v{version}: manifest HTML hash mismatch')
     print(f'v{version}: {len(paths)} image paths OK; HTML hash OK')
 
-for version in (61, 62, 63, 64, 65):
+for version in (61, 62, 63, 64, 65, 66):
     page = root / f'v{version}/index.html'
     raw = page.read_bytes()
     html = raw.decode('utf-8')
